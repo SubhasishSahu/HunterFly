@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 Usage
 -----
-python scripts/gem_drone_tender_scraper.py --json-out data/tenders.json --csv-out active_drone_tenders.csv
+python gem_drone_tender_scraper.py --json-out ../data/tenders.json --csv-out active_drone_tenders.csv
 """
 
 import argparse
