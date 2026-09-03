@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Sources — Drone MRO Business Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__title">
+      <span class="masthead__eyebrow">Workbook · Capability</span>
+      <h1>Training Sources</h1>
+    </div>
+  </div>
+</header>
+<nav class="site-nav" aria-label="Site sections">
+  <div class="site-nav__inner">
+    <a href="index.html">Home</a><a href="assumptions.html">Assumptions</a><a href="capex.html">CapEx</a><a href="opex.html">OpEx</a><a href="business-models.html">Business Models</a><a href="breakeven.html">Breakeven</a><a href="skill-matrix.html">Skill Matrix</a><a href="training-sources.html" class="is-current">Training Sources</a><a href="tender-tracker.html">Tender Tracker</a><a href="tenders.html">Live Tenders</a>
+  </div>
+</nav>
+<main class="page">
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Workbook &middot; Capability</span>
+  <h1>Training Sources</h1>
+  <p>Open and self-learning resources, one row per Skill Matrix component. Status is the same Covered/GAP read.</p>
+</div>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead><tr><th>Component/Subsystem</th><th>Status</th><th>Resource</th><th>Cost</th><th>URL</th><th>Notes</th></tr></thead>
+<tbody><tr>
+          <td>Airframe/structure (frame, arms, landing gear)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>NPTEL — Design of Fixed-Wing UAV (IIT Kanpur)</td>
+          <td class="note">Free (cert: paid)</td>
+          <td class="note"><a href="https://onlinecourses.nptel.ac.in" target="_blank" rel="noopener">https://onlinecourses.nptel.ac.in</a></td>
+          <td class="note">Structural/airframe design fundamentals, weight & CG estimation</td>
+        </tr><tr>
+          <td>Propulsion (motors, ESCs, props)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>ArduPilot Dev Documentation</td>
+          <td class="note">Free</td>
+          <td class="note"><a href="https://ardupilot.org/dev/" target="_blank" rel="noopener">https://ardupilot.org/dev/</a></td>
+          <td class="note">Covers motor/ESC output config and calibration as part of vehicle setup</td>
+        </tr><tr>
+          <td>Power system (battery packs, BMS, charging)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>Manufacturer BMS/battery safety training</td>
+          <td class="note">Varies (often free from cell/pack OEM)</td>
+          <td class="note">N/A — source from battery/BMS vendor</td>
+          <td class="note">No strong open-source course found; treat as vendor-training gap despite Medium-High complexity</td>
+        </tr><tr>
+          <td>Flight controller / autopilot (HW + firmware)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>ArduPilot Developer Guide</td>
+          <td class="note">Free</td>
+          <td class="note"><a href="https://ardupilot.org/dev/" target="_blank" rel="noopener">https://ardupilot.org/dev/</a></td>
+          <td class="note">Learn-by-doing: build the code, work through the codebase, join weekly dev call</td>
+        </tr><tr>
+          <td>Flight controller / autopilot (HW + firmware)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>PX4 Developer Guide (Dronecode/Linux Foundation)</td>
+          <td class="note">Free</td>
+          <td class="note"><a href="https://github.com/PX4/PX4-Autopilot" target="_blank" rel="noopener">https://github.com/PX4/PX4-Autopilot</a></td>
+          <td class="note">Flight stack + middleware; SITL simulation via Docker, no hardware needed to start</td>
+        </tr><tr>
+          <td>Sensors (GPS, IMU, barometer, compass, LiDAR)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>NPTEL — Drone Systems and Control</td>
+          <td class="note">Free (cert: paid)</td>
+          <td class="note"><a href="https://onlinecourses.nptel.ac.in" target="_blank" rel="noopener">https://onlinecourses.nptel.ac.in</a></td>
+          <td class="note">Sensor calibration & Kalman filtering in MATLAB, autopilot design</td>
+        </tr><tr>
+          <td>RF/communication link & telemetry</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td>Class Central — Drone Security course list</td>
+          <td class="note">Free (mostly conference talks/YouTube)</td>
+          <td class="note"><a href="https://www.classcentral.com/subject/drone-security" target="_blank" rel="noopener">https://www.classcentral.com/subject/drone-security</a></td>
+          <td class="note">Thin/unstructured — protocol hacking & RF vulnerability talks, not a formal curriculum. Confirms this as a real gap.</td>
+        </tr><tr>
+          <td>Payload (camera, gimbal, EO/IR)</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>OEM payload/gimbal calibration guides</td>
+          <td class="note">Varies by OEM</td>
+          <td class="note">N/A — source from camera/gimbal manufacturer</td>
+          <td class="note">No generic open course; calibration is payload-specific</td>
+        </tr><tr>
+          <td>Mission software / GCS (ground control station)</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td>Open-Source Drone Programming Course (RoboticsAcademy)</td>
+          <td class="note">Free</td>
+          <td class="note"><a href="https://jderobot.github.io/RoboticsAcademy/" target="_blank" rel="noopener">https://jderobot.github.io/RoboticsAcademy/</a></td>
+          <td class="note">Practical aerial robotics exercises: road-following, visual landing, search-and-rescue; 5+ years in university use</td>
+        </tr><tr>
+          <td>Cybersecurity (anti-jam, anti-spoof, data integrity)</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td>Class Central — Drone Security course list</td>
+          <td class="note">Free (mostly conference talks/YouTube)</td>
+          <td class="note"><a href="https://www.classcentral.com/subject/drone-security" target="_blank" rel="noopener">https://www.classcentral.com/subject/drone-security</a></td>
+          <td class="note">Same source as RF/comms — covers GPS-spoofing and hardware compromise talks, not certification-grade training</td>
+        </tr><tr>
+          <td>Autonomy/AI (obstacle avoidance, swarm logic)</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td>Open-Source Drone Programming Course (RoboticsAcademy)</td>
+          <td class="note">Free</td>
+          <td class="note"><a href="https://jderobot.github.io/RoboticsAcademy/" target="_blank" rel="noopener">https://jderobot.github.io/RoboticsAcademy/</a></td>
+          <td class="note">Covers autonomous navigation exercises usable as an AI/autonomy starting point</td>
+        </tr><tr>
+          <td>Quality/airworthiness sign-off</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>DGCA / Digital Sky official guidance</td>
+          <td class="note">Free (RTO training itself is paid)</td>
+          <td class="note"><a href="https://digitalsky.dgca.gov.in" target="_blank" rel="noopener">https://digitalsky.dgca.gov.in</a></td>
+          <td class="note">Regulatory basis for Type Certificate, RPC, and compliance documentation</td>
+        </tr><tr>
+          <td>Test flight & acceptance</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>DGCA-approved RPTO training (for RPC)</td>
+          <td class="note">Paid (₹25,000–1,50,000 per published fee surveys)</td>
+          <td class="note">N/A — choose a DGCA-approved RPTO</td>
+          <td class="note">No open/free path — RPC is a mandatory paid certification, not self-taught</td>
+        </tr><tr>
+          <td>Parts genealogy/traceability data</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td>N/A — internal capability</td>
+          <td class="note">N/A</td>
+          <td class="note">N/A</td>
+          <td class="note">Already covered by your existing PySpark/Databricks/SCN background; no external course needed</td>
+        </tr></tbody>
+</table>
+</div>
+<div class="callout"><p>Reading this sheet: rows shaded red are the same 4 GAP components from 'Skill Matrix' — for RF/comms and cybersecurity specifically, open self-learning content is thin and scattered (conference talks, not curricula), reinforcing that these are better sourced via partner/consultant than in-house self-study.</p></div>
+
+</main>
+<footer class="site-footer">
+  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+</footer>
+</body>
+</html>

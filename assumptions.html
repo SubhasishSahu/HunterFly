@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assumptions — Drone MRO Business Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__title">
+      <span class="masthead__eyebrow">Workbook · Inputs</span>
+      <h1>Assumptions</h1>
+    </div>
+  </div>
+</header>
+<nav class="site-nav" aria-label="Site sections">
+  <div class="site-nav__inner">
+    <a href="index.html">Home</a><a href="assumptions.html" class="is-current">Assumptions</a><a href="capex.html">CapEx</a><a href="opex.html">OpEx</a><a href="business-models.html">Business Models</a><a href="breakeven.html">Breakeven</a><a href="skill-matrix.html">Skill Matrix</a><a href="training-sources.html">Training Sources</a><a href="tender-tracker.html">Tender Tracker</a><a href="tenders.html">Live Tenders</a>
+  </div>
+</nav>
+<main class="page">
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Workbook &middot; Inputs</span>
+  <h1>Assumptions</h1>
+  <p>Every planning input driving CapEx, OpEx, and the business-model comparison. Figures are bottom-up planning estimates, not vendor quotes.</p>
+</div>
+<div class="section-heading">SCALE</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Fleet capacity (drones under MRO contract)</td><td class="num">₹100</td><td class="note">Target scale requested by user</td></tr>
+<tr><td>Avg services per drone per year</td><td class="num">₹4</td><td class="note">Quarterly scheduled maintenance assumption</td></tr>
+</tbody></table></div>
+<div class="section-heading">FACILITY</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Facility size (sq ft)</td><td class="num">₹6,000</td><td class="note">~60 sq ft/drone bay incl. stores & test bay — planning estimate</td></tr>
+<tr><td>Rent (Rs/sq ft/month) — defence corridor industrial shed</td><td class="num">₹45</td><td class="note">Planning estimate, UP/TN industrial corridor rates</td></tr>
+<tr><td>Fit-out cost (Rs/sq ft, one-time)</td><td class="num">₹900</td><td class="note">ESD flooring, benches, racking, power, clean bench — planning estimate</td></tr>
+</tbody></table></div>
+<div class="section-heading">EQUIPMENT & TOOLING (ONE-TIME)</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Diagnostic & bench test equipment</td><td class="num">₹90,00,000</td><td class="note">Avionics/motor/ESC test rigs, RF test sets — planning estimate</td></tr>
+<tr><td>Battery service infra (cycling/charging/disposal)</td><td class="num">₹35,00,000</td><td class="note">Charge/discharge stations, fireproof storage, disposal compliance</td></tr>
+<tr><td>Spares fabrication (3D printing/light CNC)</td><td class="num">₹25,00,000</td><td class="note">For minor structural/print-on-demand spares</td></tr>
+<tr><td>Tooling, jigs, ground support equipment</td><td class="num">₹20,00,000</td><td class="note">Hand tools, jigs, transport crates</td></tr>
+</tbody></table></div>
+<div class="section-heading">CERTIFICATION & COMPLIANCE (ONE-TIME)</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>DGCA Type-certificate-linked compliance & RPTO-adjacent approvals</td><td class="num">₹12,00,000</td><td class="note">Based on published DGCA/RPTO course & certification fee ranges scaled to org-level compliance (ThinkRobotics/DronePathshala 2025-26 sources)</td></tr>
+<tr><td>Quality system certification (AS9100 / ISO 9001) incl. consulting</td><td class="num">₹18,00,000</td><td class="note">Planning estimate — external audit + consulting</td></tr>
+<tr><td>Legal, incorporation, defence-vendor empanelment</td><td class="num">₹8,00,000</td><td class="note">MSME/startup registration, DPSU vendor registration</td></tr>
+</tbody></table></div>
+<div class="section-heading">SPARES & INVENTORY (ONE-TIME STOCKING)</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Initial spares inventory (rotables + consumables)</td><td class="num">₹75,00,000</td><td class="note">Planning estimate: ~2 services worth of buffer stock for 100 drones</td></tr>
+</tbody></table></div>
+<div class="section-heading">WORKFORCE (ANNUAL, LOADED COST)</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Airframe/mechanical technicians — headcount</td><td class="num">₹10</td><td class="note">1 tech per ~10 drones at 4 services/yr</td></tr>
+<tr><td>Airframe/mechanical technician — avg loaded salary (Rs/yr)</td><td class="num">₹7,00,000</td><td class="note">Planning estimate</td></tr>
+<tr><td>Avionics/electronics engineers — headcount</td><td class="num">₹4</td><td class="note"></td></tr>
+<tr><td>Avionics engineer — avg loaded salary (Rs/yr)</td><td class="num">₹11,00,000</td><td class="note">Planning estimate</td></tr>
+<tr><td>Test/ferry pilots (RPC holders) — headcount</td><td class="num">₹2</td><td class="note"></td></tr>
+<tr><td>Test pilot — avg loaded salary (Rs/yr)</td><td class="num">₹6,50,000</td><td class="note">Planning estimate</td></tr>
+<tr><td>Quality/compliance officer — headcount</td><td class="num">₹1</td><td class="note"></td></tr>
+<tr><td>Quality officer — avg loaded salary (Rs/yr)</td><td class="num">₹10,00,000</td><td class="note"></td></tr>
+<tr><td>Ops manager + admin/finance — headcount</td><td class="num">₹3</td><td class="note"></td></tr>
+<tr><td>Ops/admin — avg loaded salary (Rs/yr)</td><td class="num">₹8,00,000</td><td class="note"></td></tr>
+</tbody></table></div>
+<div class="section-heading">OTHER ANNUAL OPEX</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Utilities (power, water, HVAC for battery bays)</td><td class="num">₹14,00,000</td><td class="note">Planning estimate</td></tr>
+<tr><td>Insurance (liability, hangarkeeper's, cyber)</td><td class="num">₹15,00,000</td><td class="note">Planning estimate</td></tr>
+<tr><td>IT/software (MRO management + traceability system license)</td><td class="num">₹12,00,000</td><td class="note">Recurring SaaS/license cost; excl. one-time build</td></tr>
+<tr><td>Consumables (non-spares: cleaning, PPE, packaging)</td><td class="num">₹9,00,000</td><td class="note">Planning estimate</td></tr>
+<tr><td>Marketing, business development, travel</td><td class="num">₹10,00,000</td><td class="note">Planning estimate</td></tr>
+</tbody></table></div>
+<div class="section-heading">IT / SOFTWARE (ONE-TIME BUILD)</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>MRO scheduling + parts-genealogy/traceability platform build</td><td class="num">₹22,00,000</td><td class="note">One-time build/customization, adjacent to a Databricks/PySpark-style traceability stack</td></tr>
+</tbody></table></div>
+<div class="section-heading">WORKING CAPITAL</div>
+<div class="data-table-wrap"><table class="data-table"><thead><tr><th>Item</th><th class="num">Value</th><th>Source / basis</th></tr></thead><tbody>
+<tr><td>Working capital buffer (months of OpEx held in reserve)</td><td class="num">₹4</td><td class="note">Planning input for cash runway</td></tr>
+</tbody></table></div>
+</main>
+<footer class="site-footer">
+  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+</footer>
+</body>
+</html>

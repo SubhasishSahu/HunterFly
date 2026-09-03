@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Matrix — Drone MRO Business Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__title">
+      <span class="masthead__eyebrow">Workbook · Capability</span>
+      <h1>Technical Skill Matrix</h1>
+    </div>
+  </div>
+</header>
+<nav class="site-nav" aria-label="Site sections">
+  <div class="site-nav__inner">
+    <a href="index.html">Home</a><a href="assumptions.html">Assumptions</a><a href="capex.html">CapEx</a><a href="opex.html">OpEx</a><a href="business-models.html">Business Models</a><a href="breakeven.html">Breakeven</a><a href="skill-matrix.html" class="is-current">Skill Matrix</a><a href="training-sources.html">Training Sources</a><a href="tender-tracker.html">Tender Tracker</a><a href="tenders.html">Live Tenders</a>
+  </div>
+</nav>
+<main class="page">
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Workbook &middot; Capability</span>
+  <h1>Technical Skill Matrix</h1>
+  <p>By component and design complexity. Coverage checks live headcount from Assumptions.</p>
+</div>
+<div class="metric-strip">
+  <div class="metric metric--teal">
+    <span class="metric__value">9</span>
+    <span class="metric__label">Components covered in-house</span>
+  </div>
+  <div class="metric metric--coral">
+    <span class="metric__value">4</span>
+    <span class="metric__label">Components with a skill GAP</span>
+  </div>
+</div>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead><tr><th>Component/Subsystem</th><th>Complexity</th><th>Core Skill</th><th>Mapped Role</th><th class="num">Coverage</th><th>Status</th><th>Sourcing Recommendation</th></tr></thead>
+<tbody><tr>
+          <td>Airframe/structure (frame, arms, landing gear)</td>
+          <td>Low</td>
+          <td>Composite/metal repair, structural inspection</td>
+          <td>Technician</td>
+          <td class="num">10</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered by base technician team</td>
+        </tr><tr>
+          <td>Propulsion (motors, ESCs, props)</td>
+          <td>Low–Medium</td>
+          <td>Electromechanical diagnostics, balancing, ESC calibration</td>
+          <td>Technician</td>
+          <td class="num">10</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered by base technician team</td>
+        </tr><tr>
+          <td>Power system (battery packs, BMS, charging)</td>
+          <td>Medium–High</td>
+          <td>LiPo/Li-ion safety handling, BMS diagnostics, thermal mgmt</td>
+          <td>Technician + Avionics engineer</td>
+          <td class="num">14</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — cross-skill 1-2 technicians on BMS + mandatory battery safety cert</td>
+        </tr><tr>
+          <td>Flight controller / autopilot (HW + firmware)</td>
+          <td>High</td>
+          <td>Embedded systems, firmware flashing/debugging, PID tuning</td>
+          <td>Avionics engineer</td>
+          <td class="num">4</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered by avionics team</td>
+        </tr><tr>
+          <td>Sensors (GPS, IMU, barometer, compass, LiDAR)</td>
+          <td>High</td>
+          <td>Sensor calibration, fusion algorithms, fault diagnosis</td>
+          <td>Avionics engineer</td>
+          <td class="num">4</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered by avionics team</td>
+        </tr><tr>
+          <td>RF/communication link & telemetry</td>
+          <td>High</td>
+          <td>RF test equipment, signal integrity, encrypted datalink protocols</td>
+          <td>Avionics engineer + comms specialist</td>
+          <td class="num">0</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td class="note">GAP — no dedicated headcount; partner/consultant for defence-grade comms in Year 1</td>
+        </tr><tr>
+          <td>Payload (camera, gimbal, EO/IR)</td>
+          <td>Medium–High</td>
+          <td>Precision mechanical alignment, gimbal calibration, optics handling</td>
+          <td>Technician + Avionics engineer</td>
+          <td class="num">14</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered jointly, OEM training needed per payload type</td>
+        </tr><tr>
+          <td>Mission software / GCS (ground control station)</td>
+          <td>Very High</td>
+          <td>Software debugging, mission-planning logic, version/config control</td>
+          <td>Avionics + software specialist</td>
+          <td class="num">0</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td class="note">GAP — no dedicated headcount; outsource to GCS/software vendor initially</td>
+        </tr><tr>
+          <td>Cybersecurity (anti-jam, anti-spoof, data integrity)</td>
+          <td>Very High</td>
+          <td>RF security, GPS-spoofing detection, secure boot/firmware integrity</td>
+          <td>Cyber specialist</td>
+          <td class="num">0</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td class="note">GAP — realistically a partner/consultant, not an in-house Year-1 hire</td>
+        </tr><tr>
+          <td>Autonomy/AI (obstacle avoidance, swarm logic)</td>
+          <td>Very High</td>
+          <td>ML model validation, edge-compute debugging</td>
+          <td>AI/ML specialist</td>
+          <td class="num">0</td>
+          <td><span class="badge badge--gap">GAP</span></td>
+          <td class="note">GAP — rare skill; license/partner with a software vendor rather than hire</td>
+        </tr><tr>
+          <td>Quality/airworthiness sign-off</td>
+          <td>Medium–High</td>
+          <td>DGCA compliance, documentation, root-cause analysis, audit trails</td>
+          <td>Quality/compliance officer</td>
+          <td class="num">1</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered by QA officer</td>
+        </tr><tr>
+          <td>Test flight & acceptance</td>
+          <td>Medium</td>
+          <td>Flight test procedures, anomaly detection in-flight</td>
+          <td>Test/ferry pilot</td>
+          <td class="num">2</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — covered by RPC-holding pilots</td>
+        </tr><tr>
+          <td>Parts genealogy/traceability data</td>
+          <td>Medium (strategically high-value)</td>
+          <td>Data pipeline design, lineage tracking, audit-ready record-keeping</td>
+          <td>Founder/data engineering background</td>
+          <td class="num">1</td>
+          <td><span class="badge badge--covered">Covered</span></td>
+          <td class="note">In-house — your existing SCN/PySpark-Databricks skillset covers this; no new hire needed</td>
+        </tr></tbody>
+</table>
+</div>
+<div class="callout"><p>Reading the gaps: all 4 gap items sit at 'High' or 'Very High' design complexity — RF/comms security, mission software, cybersecurity, and autonomy/AI. This is the same territory the 'Business Models' tab's Model C (platform-led hybrid) is built around: partner or license these rather than hire, until fleet volume justifies a dedicated specialist.</p></div>
+
+</main>
+<footer class="site-footer">
+  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+</footer>
+</body>
+</html>

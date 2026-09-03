@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tender Tracker — Drone MRO Business Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__title">
+      <span class="masthead__eyebrow">Workbook · Pipeline</span>
+      <h1>Tender Tracker (workbook snapshot)</h1>
+    </div>
+  </div>
+</header>
+<nav class="site-nav" aria-label="Site sections">
+  <div class="site-nav__inner">
+    <a href="index.html">Home</a><a href="assumptions.html">Assumptions</a><a href="capex.html">CapEx</a><a href="opex.html">OpEx</a><a href="business-models.html">Business Models</a><a href="breakeven.html">Breakeven</a><a href="skill-matrix.html">Skill Matrix</a><a href="training-sources.html">Training Sources</a><a href="tender-tracker.html" class="is-current">Tender Tracker</a><a href="tenders.html">Live Tenders</a>
+  </div>
+</nav>
+<main class="page">
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Workbook &middot; Pipeline</span>
+  <h1>Tender Tracker (workbook snapshot)</h1>
+  <p>A static copy of the tracker sheet as it stood in the workbook. For the auto-refreshing version, see <a href="tenders.html">Live Tenders</a>.</p>
+</div>
+<div class="callout">
+<p>Run <code>scripts/gem_drone_tender_scraper.py</code> on your own machine, verify each hit manually, then log confirmed tenders here or on the live page.</p>
+<p>Set up GeM's and CPPP's own saved-search + email alerts as your primary channel &mdash; treat the script as a supplementary sweep.</p>
+</div>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead><tr><th>Tender ID</th><th>Title / Scope</th><th>Authority</th><th>Location</th><th>Est. Value</th><th>EMD</th><th>Closing Date</th><th>Link</th></tr></thead>
+<tbody><tr>
+          <td class="note">GEM_2025_B_6442466</td>
+          <td>Drone AHM (Annual Health Monitoring / maintenance contract)</td>
+          <td>Ministry of Defence (GeM)</td>
+          <td>—</td>
+          <td class="note">Refer tender docs</td>
+          <td class="note">Refer tender docs</td>
+          <td class="note">Closed (2025 cycle — check GeM for renewal/successor tender)</td>
+          <td class="note"><a href="https://fulfilment.gem.gov.in" target="_blank" rel="noopener">https://fulfilment.gem.gov.in</a></td>
+        </tr></tbody>
+</table>
+</div>
+
+</main>
+<footer class="site-footer">
+  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+</footer>
+</body>
+</html>

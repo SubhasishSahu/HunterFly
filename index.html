@@ -3,83 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drone MRO Tender Watch — India Defence</title>
-<meta name="description" content="Tracks active Indian defence drone/UAV maintenance, AMC, and repair tenders from GeM and CPPP.">
+<title>Home — Drone MRO Business Model</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
 <header class="masthead">
   <div class="masthead__inner">
     <div class="masthead__title">
-      <span class="masthead__eyebrow">India · Defence Procurement</span>
-      <h1>Drone MRO Tender Watch</h1>
-    </div>
-    <div class="masthead__sync">
-      <span class="masthead__sync-label">Last synced</span>
-      <span id="lastUpdated" class="masthead__sync-value">—</span>
+      <span class="masthead__eyebrow">Drone MRO Business Model · India</span>
+      <h1>Standing Cost &amp; Business Model</h1>
     </div>
   </div>
 </header>
-
-<section class="counts">
-  <div class="counts__inner">
-    <div class="count-block count-block--amber">
-      <span class="count-block__number" id="countActive">0</span>
-      <span class="count-block__label">active tenders</span>
-    </div>
-    <div class="count-block count-block--coral">
-      <span class="count-block__number" id="countClosingSoon">0</span>
-      <span class="count-block__label">closing within 7 days</span>
-    </div>
-    <div class="count-block">
-      <span class="count-block__number" id="countTotal">0</span>
-      <span class="count-block__label">tracked total</span>
-    </div>
+<nav class="site-nav" aria-label="Site sections">
+  <div class="site-nav__inner">
+    <a href="index.html" class="is-current">Home</a><a href="assumptions.html">Assumptions</a><a href="capex.html">CapEx</a><a href="opex.html">OpEx</a><a href="business-models.html">Business Models</a><a href="breakeven.html">Breakeven</a><a href="skill-matrix.html">Skill Matrix</a><a href="training-sources.html">Training Sources</a><a href="tender-tracker.html">Tender Tracker</a><a href="tenders.html">Live Tenders</a>
   </div>
-</section>
+</nav>
+<main class="page">
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Drone MRO Business Model &middot; India</span>
+  <h1>Standing Cost &amp; Business Model for a 100-Drone Defence MRO Startup</h1>
+  <p>Currency: INR. All figures are planning-level estimates, not quotes — every hardcoded number is sourced or labeled as an assumption (see comments on cells).</p>
+</div>
 
-<main class="board">
-  <div class="board__controls">
-    <input type="text" id="searchInput" class="board__search" placeholder="Search title, authority, tender ID…" aria-label="Search tenders">
-    <div class="board__filters" role="group" aria-label="Filter by status">
-      <button class="filter-btn is-active" data-status="all">All</button>
-      <button class="filter-btn" data-status="active">Active</button>
-      <button class="filter-btn" data-status="closing-soon">Closing soon</button>
-      <button class="filter-btn" data-status="closed">Closed</button>
-    </div>
-  </div>
+<div class="section-heading">How to use this</div>
+<div class="callout"><p>1. Start on the 'Assumptions' tab — every blue cell is an input you can change.</p><p>2. 'CapEx' and 'OpEx' show the base-case (full in-house) cost build, driven entirely by Assumptions.</p><p>3. 'Business Models' compares 3 structural approaches to running this business — capex/opex/breakeven shift automatically if you change Assumptions.</p><p>4. 'Breakeven' converts the cost base into a required price-per-drone-per-year at different utilization levels.</p></div>
 
-  <div class="board__table-wrap">
-    <table class="board__table" id="tenderTable">
-      <thead>
-        <tr>
-          <th scope="col">Status</th>
-          <th scope="col">Tender ID</th>
-          <th scope="col">Title / scope</th>
-          <th scope="col">Authority</th>
-          <th scope="col">Closes</th>
-          <th scope="col">Source</th>
-        </tr>
-      </thead>
-      <tbody id="tenderRows">
-        <!-- populated by script.js -->
-      </tbody>
-    </table>
-    <div id="emptyState" class="empty-state" hidden>
-      <p class="empty-state__title">No tenders match right now.</p>
-      <p class="empty-state__body">Run <code>scripts/gem_drone_tender_scraper.py</code> to pull a fresh sweep from GeM and CPPP, or adjust your filters above.</p>
-    </div>
-  </div>
+<div class="section-heading">Sourcing</div>
+<div class="callout"><p>Regulatory costs (DGCA/RPTO/Type Certificate related figures) are grounded in published DGCA/RPTO fee ranges (2025-26 sources). Facility, equipment, staffing, and inventory figures are bottom-up planning estimates based on comparable MRO/light-manufacturing setups in Indian defence corridors (UP/TN) — NOT a published benchmark, since no public 'cost to MRO 100 drones' figure exists. Treat every such cell as a starting assumption to replace with vendor quotes.</p></div>
+
+<div class="section-heading">Sections</div>
+<div class="card-grid"><a class="nav-card" href="assumptions.html"><span class="nav-card__label">01</span><span class="nav-card__title">Assumptions</span><span class="nav-card__desc">Every planning input &mdash; scale, facility, equipment, workforce, certification.</span></a><a class="nav-card" href="capex.html"><span class="nav-card__label">02</span><span class="nav-card__title">CapEx & Standing Cost</span><span class="nav-card__desc">One-time cost to launch: facility, equipment, certification, spares, working capital.</span></a><a class="nav-card" href="opex.html"><span class="nav-card__label">03</span><span class="nav-card__title">OpEx (Year 1)</span><span class="nav-card__desc">Annual operating cost, cost per drone, and cost per service event.</span></a><a class="nav-card" href="business-models.html"><span class="nav-card__label">04</span><span class="nav-card__title">Business Models Compared</span><span class="nav-card__desc">Full in-house vs. asset-light vs. platform-led hybrid &mdash; margin, breakeven, payback.</span></a><a class="nav-card" href="breakeven.html"><span class="nav-card__label">05</span><span class="nav-card__title">Breakeven Sensitivity</span><span class="nav-card__desc">Required price per drone at different fleet utilization levels.</span></a><a class="nav-card" href="skill-matrix.html"><span class="nav-card__label">06</span><span class="nav-card__title">Skill Matrix</span><span class="nav-card__desc">13 components mapped to in-house coverage &mdash; and the 4 real gaps.</span></a><a class="nav-card" href="training-sources.html"><span class="nav-card__label">07</span><span class="nav-card__title">Training Sources</span><span class="nav-card__desc">Open/self-learning resources for every component, linked to the skill gaps.</span></a><a class="nav-card" href="tender-tracker.html"><span class="nav-card__label">08</span><span class="nav-card__title">Tender Tracker</span><span class="nav-card__desc">Workbook snapshot of tracked GeM/CPPP drone maintenance tenders.</span></a><a class="nav-card" href="tenders.html"><span class="nav-card__label">09</span><span class="nav-card__title">Live Tenders</span><span class="nav-card__desc">Auto-refreshing dashboard sourced from the tender scraper.</span></a></div>
+
 </main>
-
 <footer class="site-footer">
-  <p>Data pulled from GeM and CPPP by <a href="scripts/gem_drone_tender_scraper.py">gem_drone_tender_scraper.py</a>, refreshed on a schedule via GitHub Actions. Portal structure changes over time — if results stop appearing, the scraper may need maintenance; open an issue or update the page structure selectors in the script.</p>
+  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
 </footer>
-
-<script src="assets/script.js"></script>
 </body>
 </html>
