@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-page="opex">
 <div class="shell">
 <aside class="sidebar">
   <div class="brand">
@@ -23,36 +23,26 @@
   <div class="main-wrap">
     <main class="page">
 <div class="page-hero">
-  <span class="page-hero__eyebrow">SEC. 04 &mdash; ANNUAL COST</span>
+  <span class="page-hero__eyebrow">SEC. 04 — ANNUAL COST (LIVE)</span>
   <h1>OpEx (Year 1)</h1>
-  <p>Full in-house model. Payroll dominates the base; every line links back to Assumptions.</p>
+  <p>Full in-house model. Recalculates live from <a href="assumptions.html">Assumptions</a>.</p>
 </div>
-<div class="metric-strip">
-  <div class="metric">
-    <span class="metric__value">₹2.83 Cr</span>
-    <span class="metric__label">Total annual OpEx</span>
-  </div>
-  <div class="metric metric--teal">
-    <span class="metric__value">₹2,83,400</span>
-    <span class="metric__label">Cost per drone per year</span>
-  </div>
-  <div class="metric metric--coral">
-    <span class="metric__value">₹70,850</span>
-    <span class="metric__label">Cost per service event</span>
-  </div>
-</div>
+<div class="metric-strip" id="opexMetrics"></div>
 <div class="data-table-wrap">
 <table class="data-table">
 <thead><tr><th>Item</th><th class="num">Rs/year</th><th>Formula basis</th></tr></thead>
-<tbody><tr><td>Facility rent (annual)</td><td class="num">₹32,40,000</td><td class="note">Sq ft × rent/sq ft/month × 12</td></tr><tr><td>Airframe/mechanical technicians (loaded)</td><td class="num">₹70,00,000</td><td class="note">Headcount × avg loaded salary</td></tr><tr><td>Avionics/electronics engineers (loaded)</td><td class="num">₹44,00,000</td><td class="note">Headcount × avg loaded salary</td></tr><tr><td>Test/ferry pilots (loaded)</td><td class="num">₹13,00,000</td><td class="note">Headcount × avg loaded salary</td></tr><tr><td>Quality/compliance officer (loaded)</td><td class="num">₹10,00,000</td><td class="note">Headcount × avg loaded salary</td></tr><tr><td>Ops manager + admin/finance (loaded)</td><td class="num">₹24,00,000</td><td class="note">Headcount × avg loaded salary</td></tr><tr><td>Utilities</td><td class="num">₹14,00,000</td><td class="note">Direct input</td></tr><tr><td>Insurance</td><td class="num">₹15,00,000</td><td class="note">Direct input</td></tr><tr><td>IT/software license (recurring)</td><td class="num">₹12,00,000</td><td class="note">Direct input</td></tr><tr><td>Consumables</td><td class="num">₹9,00,000</td><td class="note">Direct input</td></tr><tr><td>Marketing & business development</td><td class="num">₹10,00,000</td><td class="note">Direct input</td></tr><tr><td>Recurring spares replenishment (steady-state, ~40% of initial stock/yr)</td><td class="num">₹30,00,000</td><td class="note">Planning assumption — 40% of initial stock value</td></tr></tbody>
+<tbody id="opexRows"></tbody>
 </table>
 </div>
 
     </main>
     <footer class="site-footer">
-  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+  <p>Live-calculated from the assumptions stored in this browser. Nothing here is sent anywhere &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
 </footer>
   </div>
 </div>
+<script src="assets/model.js"></script>
+<script src="assets/render.js"></script>
+
 </body>
 </html>

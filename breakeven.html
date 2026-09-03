@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-page="breakeven">
 <div class="shell">
 <aside class="sidebar">
   <div class="brand">
@@ -23,23 +23,21 @@
   <div class="main-wrap">
     <main class="page">
 <div class="page-hero">
-  <span class="page-hero__eyebrow">SEC. 06 &mdash; SENSITIVITY</span>
+  <span class="page-hero__eyebrow">SEC. 06 — SENSITIVITY (LIVE)</span>
   <h1>Breakeven Sensitivity</h1>
-  <p>Model A (full in-house), by fleet utilization. OpEx held fixed; revenue and EBITDA flex with drones actually serviced.</p>
+  <p>Model A (full in-house), by fleet utilization. Uses the Model A price set on <a href="business-models.html">Business Models</a>.</p>
 </div>
-<div class="data-table-wrap">
-<table class="data-table">
-<thead><tr><th>Metric</th><th class="num">50%</th><th class="num">70%</th><th class="num">85%</th><th class="num">100%</th><th class="num">120%</th></tr></thead>
-<tbody><tr><td>Drones serviced</td><td class="num">50</td><td class="num">70</td><td class="num">85</td><td class="num">100</td><td class="num">120</td></tr><tr><td>Total annual OpEx (fixed, base case) (Rs)</td><td class="num">₹2,83,40,000</td><td class="num">₹2,83,40,000</td><td class="num">₹2,83,40,000</td><td class="num">₹2,83,40,000</td><td class="num">₹2,83,40,000</td></tr><tr><td>Required price per drone/yr to breakeven (Rs)</td><td class="num">₹5,66,800</td><td class="num">₹4,04,857</td><td class="num">₹3,33,412</td><td class="num">₹2,83,400</td><td class="num">₹2,36,167</td></tr><tr><td>At assumed price (Rs/drone/yr, from Business Models tab)</td><td class="num">₹4,80,000</td><td class="num">₹4,80,000</td><td class="num">₹4,80,000</td><td class="num">₹4,80,000</td><td class="num">₹4,80,000</td></tr><tr><td>Revenue at assumed price (Rs)</td><td class="num">₹2,40,00,000</td><td class="num">₹3,36,00,000</td><td class="num">₹4,08,00,000</td><td class="num">₹4,80,00,000</td><td class="num">₹5,76,00,000</td></tr><tr><td>EBITDA at assumed price (Rs)</td><td class="num">-₹43,40,000</td><td class="num">₹52,60,000</td><td class="num">₹1,24,60,000</td><td class="num">₹1,96,60,000</td><td class="num">₹2,92,60,000</td></tr></tbody>
-</table>
-</div>
-<div class="callout"><p>Note: OpEx held constant across utilization (mostly fixed payroll/facility); spares replenishment share would flex slightly with volume in reality.</p></div>
+<div class="data-table-wrap" id="breakevenTable"></div>
+<div class="callout"><p>OpEx is held fixed across utilization (mostly fixed payroll/facility); spares replenishment would flex slightly with volume in reality.</p></div>
 
     </main>
     <footer class="site-footer">
-  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+  <p>Live-calculated from the assumptions stored in this browser. Nothing here is sent anywhere &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
 </footer>
   </div>
 </div>
+<script src="assets/model.js"></script>
+<script src="assets/render.js"></script>
+
 </body>
 </html>

@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-page="business-models">
 <div class="shell">
 <aside class="sidebar">
   <div class="brand">
@@ -23,29 +23,76 @@
   <div class="main-wrap">
     <main class="page">
 <div class="page-hero">
-  <span class="page-hero__eyebrow">SEC. 05 &mdash; STRATEGY</span>
+  <span class="page-hero__eyebrow">SEC. 05 — STRATEGY (LIVE)</span>
   <h1>Business Models Compared</h1>
-  <p>Three structural approaches to running the MRO business &mdash; capex/opex/breakeven recalculate from the same Assumptions.</p>
+  <p>Three structural approaches to running the MRO business. Adjust the levers below &mdash; capex/opex/breakeven recalculate live from <a href="assumptions.html">Assumptions</a>.</p>
 </div>
+
+<div class="section-heading">Model levers (editable)</div>
 <div class="data-table-wrap">
 <table class="data-table">
-<thead><tr><th>Metric</th><th class="num">Model A: Full In-House</th><th class="num">Model B: Asset-Light Hub &amp; Spoke</th><th class="num">Model C: Platform-Led Hybrid</th></tr></thead>
-<tbody><tr><td>  → multiplier value</td><td class="num">100.0%</td><td class="num">55.0%</td><td class="num">40.0%</td></tr><tr><td>  CapEx (Rs)</td><td class="num">₹3,59,00,000</td><td class="num">₹1,97,45,000</td><td class="num">₹1,43,60,000</td></tr><tr><td>  → multiplier value</td><td class="num">100.0%</td><td class="num">70.0%</td><td class="num">55.0%</td></tr><tr><td>  OpEx before partner/revenue-share (Rs/yr)</td><td class="num">₹2,83,40,000</td><td class="num">₹1,98,38,000</td><td class="num">₹1,55,87,000</td></tr><tr><td>  Revenue share paid to field/repair partners (% of revenue)</td><td class="num">0.0%</td><td class="num">30.0%</td><td class="num">20.0%</td></tr><tr><td>  SaaS/platform license revenue (traceability+predictive maintenance), Rs/yr</td><td class="num">₹0</td><td class="num">₹25,00,000</td><td class="num">₹90,00,000</td></tr><tr><td>Assumed service price per drone per year (Rs) — input</td><td class="num">₹4,80,000</td><td class="num">₹4,80,000</td><td class="num">₹4,80,000</td></tr><tr><td>Service revenue at full fleet capacity (Rs/yr)</td><td class="num">₹4,80,00,000</td><td class="num">₹4,80,00,000</td><td class="num">₹4,80,00,000</td></tr><tr><td>Less: partner revenue share (Rs/yr)</td><td class="num">₹0</td><td class="num">-₹1,44,00,000</td><td class="num">-₹96,00,000</td></tr><tr><td>Total revenue (service + SaaS − partner share) (Rs/yr)</td><td class="num">₹4,80,00,000</td><td class="num">₹3,61,00,000</td><td class="num">₹4,74,00,000</td></tr><tr><td>Total OpEx incl. partner share already netted above (Rs/yr)</td><td class="num">₹2,83,40,000</td><td class="num">₹1,98,38,000</td><td class="num">₹1,55,87,000</td></tr><tr><td>EBITDA at full capacity (Rs/yr)</td><td class="num">₹1,96,60,000</td><td class="num">₹1,62,62,000</td><td class="num">₹3,18,13,000</td></tr><tr><td>EBITDA margin (%)</td><td class="num">41.0%</td><td class="num">45.0%</td><td class="num">67.1%</td></tr><tr><td>Breakeven fleet size (# drones at given price)</td><td class="num">59 drones</td><td class="num">52 drones</td><td class="num">17 drones</td></tr><tr><td>CapEx payback period (years, EBITDA-funded)</td><td class="num">1.83 yrs</td><td class="num">1.21 yrs</td><td class="num">0.45 yrs</td></tr></tbody>
+<thead><tr><th>Driver</th><th class="num">Model A</th><th class="num">Model B</th><th class="num">Model C</th></tr></thead>
+<tbody>
+<tr><td>CapEx multiplier vs. base case</td>
+<td class="num"><input type="number" step="0.01" data-bmkey="capexMultA" style="width:70px;text-align:right"></td>
+<td class="num"><input type="number" step="0.01" data-bmkey="capexMultB" style="width:70px;text-align:right"></td>
+<td class="num"><input type="number" step="0.01" data-bmkey="capexMultC" style="width:70px;text-align:right"></td></tr>
+<tr><td>OpEx multiplier vs. base case</td>
+<td class="num"><input type="number" step="0.01" data-bmkey="opexMultA" style="width:70px;text-align:right"></td>
+<td class="num"><input type="number" step="0.01" data-bmkey="opexMultB" style="width:70px;text-align:right"></td>
+<td class="num"><input type="number" step="0.01" data-bmkey="opexMultC" style="width:70px;text-align:right"></td></tr>
+<tr><td>Revenue share paid to field/repair partners</td>
+<td class="num"><input type="number" step="0.01" data-bmkey="partnerShareA" style="width:70px;text-align:right"></td>
+<td class="num"><input type="number" step="0.01" data-bmkey="partnerShareB" style="width:70px;text-align:right"></td>
+<td class="num"><input type="number" step="0.01" data-bmkey="partnerShareC" style="width:70px;text-align:right"></td></tr>
+<tr><td>SaaS/platform revenue (Rs/yr)</td>
+<td class="num"><input type="number" step="10000" data-bmkey="saasA" style="width:110px;text-align:right"></td>
+<td class="num"><input type="number" step="10000" data-bmkey="saasB" style="width:110px;text-align:right"></td>
+<td class="num"><input type="number" step="10000" data-bmkey="saasC" style="width:110px;text-align:right"></td></tr>
+<tr><td>Assumed service price per drone per year (Rs)</td>
+<td class="num"><input type="number" step="1000" data-bmkey="priceA" style="width:110px;text-align:right"></td>
+<td class="num"><input type="number" step="1000" data-bmkey="priceB" style="width:110px;text-align:right"></td>
+<td class="num"><input type="number" step="1000" data-bmkey="priceC" style="width:110px;text-align:right"></td></tr>
+</tbody>
 </table>
 </div>
 
+<div class="section-heading">Computed comparison</div>
+<div class="data-table-wrap" id="bmMetrics"></div>
+
 <div class="section-heading">Qualitative profile</div>
 <div class="model-columns">
-  <div class="model-col"><h3>Model A: Full In-House</h3><dl><dt>Core asset</dt><dd>Owned facility + full tooling + payroll</dd><dt>Scaling mechanism</dt><dd>Add technicians & floor space linearly</dd><dt>Time to first revenue</dt><dd>Slowest — full certification + hiring before ops</dd><dt>Key risk</dt><dd>High fixed cost if fleet contracts are delayed or smaller than 100</dd><dt>Best fit given your background</dt><dd>If you want to own the physical MRO business outright</dd></dl></div>
-  <div class="model-col"><h3>Model B: Asset-Light Hub &amp; Spoke</h3><dl><dt>Core asset</dt><dd>Small certified hub + partner network + shared SOPs</dd><dt>Scaling mechanism</dt><dd>Onboard new certified partners per region</dd><dt>Time to first revenue</dt><dd>Faster — partners may already hold RPTO/quality certs</dd><dt>Key risk</dt><dd>Quality control across partners; margin leakage to revenue share</dd><dt>Best fit given your background</dt><dd>If you want geographic reach without full capex</dd></dl></div>
-  <div class="model-col"><h3>Model C: Platform-Led Hybrid</h3><dl><dt>Core asset</dt><dd>Traceability/predictive-maintenance software IP + light avionics bay</dd><dt>Scaling mechanism</dt><dd>License software to more MRO operators/DPSUs; drone count is secondary</dd><dt>Time to first revenue</dt><dd>Fastest for software revenue; repair revenue still gated by certs</dd><dt>Key risk</dt><dd>Depends on platform adoption; still needs a credible repair capability to sell trust</dd><dt>Best fit given your background</dt><dd>Strongest fit — leverages your SCN/traceability & data engineering base directly</dd></dl></div>
+  <div class="model-col"><h3>Model A: Full In-House</h3><dl>
+    <dt>Core asset</dt><dd>Owned facility + full tooling + payroll</dd>
+    <dt>Scaling mechanism</dt><dd>Add technicians &amp; floor space linearly</dd>
+    <dt>Time to first revenue</dt><dd>Slowest &mdash; full certification + hiring before ops</dd>
+    <dt>Key risk</dt><dd>High fixed cost if fleet contracts are delayed or smaller than 100</dd>
+    <dt>Best fit given your background</dt><dd>If you want to own the physical MRO business outright</dd>
+  </dl></div>
+  <div class="model-col"><h3>Model B: Asset-Light Hub &amp; Spoke</h3><dl>
+    <dt>Core asset</dt><dd>Small certified hub + partner network + shared SOPs</dd>
+    <dt>Scaling mechanism</dt><dd>Onboard new certified partners per region</dd>
+    <dt>Time to first revenue</dt><dd>Faster &mdash; partners may already hold RPTO/quality certs</dd>
+    <dt>Key risk</dt><dd>Quality control across partners; margin leakage to revenue share</dd>
+    <dt>Best fit given your background</dt><dd>If you want geographic reach without full capex</dd>
+  </dl></div>
+  <div class="model-col"><h3>Model C: Platform-Led Hybrid</h3><dl>
+    <dt>Core asset</dt><dd>Traceability/predictive-maintenance software IP + light avionics bay</dd>
+    <dt>Scaling mechanism</dt><dd>License software to more MRO operators/DPSUs; drone count is secondary</dd>
+    <dt>Time to first revenue</dt><dd>Fastest for software revenue; repair revenue still gated by certs</dd>
+    <dt>Key risk</dt><dd>Depends on platform adoption; still needs a credible repair capability to sell trust</dd>
+    <dt>Best fit given your background</dt><dd>Strongest fit &mdash; leverages your SCN/traceability &amp; data engineering base directly</dd>
+  </dl></div>
 </div>
 
     </main>
     <footer class="site-footer">
-  <p>Generated from the "Drone MRO Business Model" workbook. Figures are planning-level estimates, not vendor quotes &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
+  <p>Live-calculated from the assumptions stored in this browser. Nothing here is sent anywhere &mdash; see the <a href="index.html">Home</a> page for sourcing notes.</p>
 </footer>
   </div>
 </div>
+<script src="assets/model.js"></script>
+<script src="assets/render.js"></script>
+
 </body>
 </html>
