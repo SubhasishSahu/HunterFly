@@ -3,30 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drone MRO Tender Watch — India Defence</title>
+<title>Live Tenders — Drone MRO Field Dossier</title>
 <meta name="description" content="Tracks active Indian defence drone/UAV maintenance, AMC, and repair tenders from GeM and CPPP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
-<header class="masthead">
-  <div class="masthead__inner">
-    <div class="masthead__title">
-      <span class="masthead__eyebrow">India · Defence Procurement</span>
-      <h1>Drone MRO Tender Watch</h1>
-    </div>
-    <div class="masthead__sync">
-      <span class="masthead__sync-label">Last synced</span>
-      <span id="lastUpdated" class="masthead__sync-value">—</span>
-    </div>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand">
+    <span class="brand__eyebrow">FILE: DRONE-MRO</span>
+    <a href="index.html" class="brand__name">FIELD DOSSIER</a>
   </div>
-</header>
-
-<nav class="site-nav" aria-label="Site sections">
-  <div class="site-nav__inner">
+  <ul class="navlist">
     <a href="index.html">Home</a>
     <a href="assumptions.html">Assumptions</a>
     <a href="capex.html">CapEx</a>
@@ -37,64 +28,69 @@
     <a href="training-sources.html">Training Sources</a>
     <a href="tender-tracker.html">Tender Tracker</a>
     <a href="tenders.html" class="is-current">Live Tenders</a>
-  </div>
-</nav>
+  </ul>
+</aside>
+<div class="main-wrap">
+<main class="page">
 
-<section class="counts">
-  <div class="counts__inner">
-    <div class="count-block count-block--amber">
-      <span class="count-block__number" id="countActive">0</span>
-      <span class="count-block__label">active tenders</span>
-    </div>
-    <div class="count-block count-block--coral">
-      <span class="count-block__number" id="countClosingSoon">0</span>
-      <span class="count-block__label">closing within 7 days</span>
-    </div>
-    <div class="count-block">
-      <span class="count-block__number" id="countTotal">0</span>
-      <span class="count-block__label">tracked total</span>
-    </div>
-  </div>
-</section>
+<div class="page-hero">
+  <span class="page-hero__eyebrow">SEC. 10 &mdash; PIPELINE (LIVE)</span>
+  <h1>Live Tenders</h1>
+  <p>Auto-refreshing sweep of GeM and CPPP for drone/UAV maintenance, AMC, and repair tenders. Last synced: <span id="lastUpdated">&mdash;</span></p>
+</div>
 
-<main class="board">
-  <div class="board__controls">
-    <input type="text" id="searchInput" class="board__search" placeholder="Search title, authority, tender ID…" aria-label="Search tenders">
-    <div class="board__filters" role="group" aria-label="Filter by status">
-      <button class="filter-btn is-active" data-status="all">All</button>
-      <button class="filter-btn" data-status="active">Active</button>
-      <button class="filter-btn" data-status="closing-soon">Closing soon</button>
-      <button class="filter-btn" data-status="closed">Closed</button>
-    </div>
+<div class="counts__inner">
+  <div class="count-block count-block--amber">
+    <span class="count-block__number" id="countActive">0</span>
+    <span class="count-block__label">active tenders</span>
   </div>
+  <div class="count-block count-block--coral">
+    <span class="count-block__number" id="countClosingSoon">0</span>
+    <span class="count-block__label">closing within 7 days</span>
+  </div>
+  <div class="count-block">
+    <span class="count-block__number" id="countTotal">0</span>
+    <span class="count-block__label">tracked total</span>
+  </div>
+</div>
 
-  <div class="board__table-wrap">
-    <table class="board__table" id="tenderTable">
-      <thead>
-        <tr>
-          <th scope="col">Status</th>
-          <th scope="col">Tender ID</th>
-          <th scope="col">Title / scope</th>
-          <th scope="col">Authority</th>
-          <th scope="col">Closes</th>
-          <th scope="col">Source</th>
-        </tr>
-      </thead>
-      <tbody id="tenderRows">
-        <!-- populated by script.js -->
-      </tbody>
-    </table>
-    <div id="emptyState" class="empty-state" hidden>
-      <p class="empty-state__title">No tenders match right now.</p>
-      <p class="empty-state__body">Run <code>scripts/gem_drone_tender_scraper.py</code> to pull a fresh sweep from GeM and CPPP, or adjust your filters above.</p>
-    </div>
+<div class="board__controls">
+  <input type="text" id="searchInput" class="board__search" placeholder="Search title, authority, tender ID…" aria-label="Search tenders">
+  <div class="board__filters" role="group" aria-label="Filter by status">
+    <button class="filter-btn is-active" data-status="all">All</button>
+    <button class="filter-btn" data-status="active">Active</button>
+    <button class="filter-btn" data-status="closing-soon">Closing soon</button>
+    <button class="filter-btn" data-status="closed">Closed</button>
   </div>
+</div>
+
+<div class="board__table-wrap">
+  <table class="board__table" id="tenderTable">
+    <thead>
+      <tr>
+        <th scope="col">Status</th>
+        <th scope="col">Tender ID</th>
+        <th scope="col">Title / scope</th>
+        <th scope="col">Authority</th>
+        <th scope="col">Closes</th>
+        <th scope="col">Source</th>
+      </tr>
+    </thead>
+    <tbody id="tenderRows">
+    </tbody>
+  </table>
+  <div id="emptyState" class="empty-state" hidden>
+    <p class="empty-state__title">No tenders match right now.</p>
+    <p class="empty-state__body">Run <code>scripts/gem_drone_tender_scraper.py</code> to pull a fresh sweep from GeM and CPPP, or adjust your filters above.</p>
+  </div>
+</div>
+
 </main>
-
 <footer class="site-footer">
   <p>Data pulled from GeM and CPPP by <a href="scripts/gem_drone_tender_scraper.py">gem_drone_tender_scraper.py</a>, refreshed on a schedule via GitHub Actions. Portal structure changes over time — verify every listing on the source portal before bidding. Not affiliated with GeM, CPPP, or the Ministry of Defence.</p>
 </footer>
-
+</div>
+</div>
 <script src="assets/script.js"></script>
 </body>
 </html>
