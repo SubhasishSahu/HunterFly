@@ -1,0 +1,18 @@
+{
+  "last_updated": "2026-09-03T00:00:00+05:30",
+  "source_note": "Seeded manually from verified search results. Run scripts/gem_drone_tender_scraper.py to refresh, or wait for the scheduled GitHub Action.",
+  "tenders": [
+    {
+      "id": "GEM_2025_B_6442466",
+      "title": "Drone AHM (Annual Health Monitoring / maintenance contract)",
+      "authority": "Ministry of Defence (via GeM)",
+      "location": "Unspecified — refer tender docs",
+      "value": "Refer tender docs",
+      "emd": "Refer tender docs",
+      "closes": "2025-07-31",
+      "status": "closed",
+      "link": "https://fulfilment.gem.gov.in",
+      "source": "GeM"
+    }
+  ]
+}

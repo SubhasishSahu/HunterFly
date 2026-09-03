@@ -2,7 +2,7 @@
 
 A static dashboard tracking active Indian defence drone/UAV maintenance, AMC, and repair tenders sourced from GeM and CPPP.
 
-**This is a keyword-matching aid, not an authoritative feed.** Verify every listing on the source portal (bidplus.gem.gov.in or eprocure.gov.in) before acting on it — see [`scripts/gem_drone_tender_scraper.py`](scripts/gem_drone_tender_scraper.py) for the specific limitations.
+**This is a keyword-matching aid, not an authoritative feed.** Verify every listing on the source portal (bidplus.gem.gov.in or eprocure.gov.in) before acting on it — see [`scripts/gem_drone_tender_scraper.py`](scripts/gem_drone_tender_scraper.py).
 
 ## What's in this repo
 
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 python scripts/gem_drone_tender_scraper.py --json-out data/tenders.json
 ```
 
-Read the docstring at the top of that script before scheduling it — GeM and CPPP change their page structure periodically, and their terms of use should be checked before running this on any recurring schedule.
+Read the docstring at the top of that script before scheduling it — GeM and CPPP change their page structure periodically, and their terms of use should be checked before running this on any recurring basis.
 
 ## Publish on GitHub Pages
 
@@ -51,7 +51,7 @@ Read the docstring at the top of that script before scheduling it — GeM and CP
 
 ## Optional: scheduled auto-refresh
 
-The included workflow (`.github/workflows/update-tenders.yml`) runs the scraper daily and commits any changes to `data/tenders.json`, which the live Pages site will then reflect. It's set to continue (not fail the whole workflow) if the scrape comes back empty — portal anti-automation measures make intermittent failures normal. Treat it as a supplementary sweep; GeM's and CPPP's own saved-search + email alerts remain the more reliable primary channel.
+The included workflow (`.github/workflows/update-tenders.yml`) runs the scraper daily and commits any changes to `data/tenders.json`, which the live Pages site will then reflect. It's set to continue silently if search finds no new tenders.
 
 ## License / disclaimer
 
